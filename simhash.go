@@ -163,7 +163,7 @@ func (w *WordFeatureSet) normalize() {
 	w.b = bytes.ToLower(w.b)
 }
 
-var boundaries = regexp.MustCompile(`[\w']+(?:\://[\w\./]+){0,1}`)
+var boundaries = regexp.MustCompile(`[\w':]+(?://[\w\./]+){0,1}`)
 var unicodeBoundaries = regexp.MustCompile(`[\pL-_']+`)
 
 // Returns a []Feature representing each word in the byte slice
